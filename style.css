@@ -1,0 +1,75 @@
+body {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: hsl(235, 35%, 19%);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.stopwatch-container {
+  display: flex;
+  margin-top: 160px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stopwatch {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: hsl(235, 35%, 19%);
+  padding: 20px;
+  box-shadow: 0 0 20px hsl(235, 36%, 35%);
+}
+
+#displayTime {
+  font-size: 35px;
+  margin-top: 75px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.buttons button {
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+#lapList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  max-height: 190px;
+  overflow-y: auto;
+  scrollbar-width: 20px;
+}
+
+#lapList li {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 3px solid hsl(235, 36%, 35%);
+  border-radius: 50px;
+}
+
+#lapList::-webkit-scrollbar {
+  width: 12px;
+}
+
+#lapList::-webkit-scrollbar-thumb {
+  background-color: #3498db;
+  border-radius: 6px;
+}
+
+#lapList::-webkit-scrollbar-track {
+  background-color: #2c2c2c; /* Track color */
+}

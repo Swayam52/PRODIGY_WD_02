@@ -3,6 +3,7 @@ let min = 0;
 let hr = 0;
 let timer = null;
 let lapTimes = [];
+let laps = [];
 
 let displayTime = document.getElementById("displayTime");
 let lapList = document.getElementById("lapList");
@@ -11,7 +12,8 @@ document.getElementById("pause").style.display = "none";
 document.getElementById("reset").style.display = "none";
 document.getElementById("lap").style.display = "none";
 
-const stopwatch = ()=>{
+//logic for timer
+const stopwatch = ()=>{                         
   sec++;
   if(sec == 60){
     sec = 0;
@@ -29,7 +31,8 @@ const stopwatch = ()=>{
   displayTime.innerHTML = h + ":" + m + ":" + s;
 }
 
-const startTimer = ()=>{
+//start the timer
+const startTimer = ()=>{                                          
   if(timer !== null){
     clearInterval(timer);
   }
@@ -40,13 +43,15 @@ const startTimer = ()=>{
   timer = setInterval(stopwatch, 1000);
 }
 
-const pauseTimer = ()=>{
+//pause the timer
+const pauseTimer = ()=>{                                         
   document.getElementById("start").style.display = "block";
   document.getElementById("pause").style.display = "none";
   clearInterval(timer);
 }
 
-const resetTimer = ()=>{
+//reset the timer
+const resetTimer = ()=>{                                          
   document.getElementById("start").style.display = "block";
   document.getElementById("pause").style.display = "none";
   document.getElementById("reset").style.display = "none";
@@ -60,6 +65,7 @@ const resetTimer = ()=>{
   updateLapList();
 }
 
+// logic for lap
 const addLap = () => {
   let lap_h = hr < 10 ? "0"+hr : hr;
   let lap_m = min < 10 ? "0"+min : min;
@@ -70,11 +76,12 @@ const addLap = () => {
   updateLapList();
 };
 
+// lap list logic
 const updateLapList = () => {
   lapList.innerHTML = "";
   lapTimes.forEach((lap, index) => {
     const lapItem = document.createElement("li");
     lapItem.textContent = `Lap ${index + 1}: ${lap}`;
-    lapList.appendChild(lapItem);
+    lapList.prepend(lapItem);
   });
 };

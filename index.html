@@ -3,20 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <!-- css -->
   <link rel="stylesheet" href="style.css">
+
   <title>Stopwatch</title>
 </head>
 <body>
-  <div class="stopwatch">
-    <h1 id="displayTime">00:00:00</h1>
-    <div class="buttons">
-      <button id="pause" onclick="pauseTimer()">Pause</button>
-      <button id="start" onclick="startTimer()">Start</button>
-      <button id="reset" onclick="resetTimer()">Reset</button>
-      <button id="lap" onclick="addLap()">Lap</button>
-      <ul id="lapList"></ul>
+  <div class="stopwatch-container">
+    <div class="stopwatch">
+      <h1 id="displayTime">00:00:00</h1>
     </div>
+    <div class="buttons">
+      <button id="reset" onclick="resetTimer()"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+      <button id="pause" onclick="pauseTimer()"><i class="fa-solid fa-pause"></i></button>
+      <button id="start" onclick="startTimer()"><i class="fa-solid fa-play"></i></button>
+      <button id="lap" onclick="addLap()"><i class="fa-solid fa-stopwatch"></i></button>
+    </div>
+    <ul id="lapList"></ul>
   </div>
+  
+  <!-- javascript -->
   <script src="script.js"></script>
 </body>
 </html>
