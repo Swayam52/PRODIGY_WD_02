@@ -1,12 +1,12 @@
 # PRODIGY_WD_02
 
-This is Task 2 of my Web Development Internship at Prodigy InfoTech.It is a simple stopwatch application implemented using HTML, CSS, and JavaScript. The stopwatch allows users to start, pause, reset, and record laps.
+This is Task 2 of my Web Development Internship at Prodigy InfoTech. It is a simple stopwatch application implemented using HTML, CSS, and JavaScript. The stopwatch allows users to start, pause, reset, and record laps.
 
 ## Table of Contents
 
 - [Features](#features)
-- [Usage](#usage)
 - [How It Works](#how-it-works)
+- [Usage](#usage)
 - [Contributing](#contributing)
 
 ## Features
